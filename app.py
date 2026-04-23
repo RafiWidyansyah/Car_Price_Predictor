@@ -26,7 +26,7 @@ st.sidebar.header("📝 Enter Car Specifications")
 def user_input_features():
     # Numerical Features
     year = st.sidebar.slider('Vehicle Year', 2000, 2024, 2015)
-    km_driven = st.sidebar.number_input('Kilometer (KM Driven)', value=50000)
+    km_driven = st.sidebar.number_input('Kilometer (KM Driven)', value=0)
     seats = st.sidebar.selectbox('Number of Seats', [2, 4, 5, 7, 8])
     max_power = st.sidebar.number_input('Max Power (bhp)', value=100.0)
     mileage = st.sidebar.number_input('Mileage (kmpl)', value=18.0)
