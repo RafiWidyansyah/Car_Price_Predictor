@@ -52,7 +52,7 @@ def predict_price(input_df):
     return res_rfr, res_svr
 
 # --- 4. Streamlit UI ---
-st.title('🚗 Car Price Prediction App')
+st.title('🚗 Used Car Price Prediction App')
 
 with st.sidebar:
     st.header("Input Car Features")
