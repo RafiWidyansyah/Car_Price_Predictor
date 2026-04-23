@@ -11,9 +11,17 @@ def load_data():
 
 @st.cache_resource
 def load_models():
-    rfr = joblib.load('best_random_forest_regressor_model.joblib')
-    svr = joblib.load('best_SVR_Model.joblib')
-    return rfr, svr
+    try:
+        rfr = joblib.load('best_random_forest_regressor_model.joblib')
+        svr = joblib.load('best_SVR_Model.joblib')
+        return rfr, svr
+    except EOFError:
+        st.error("🚨 **Error:** One of your model files (.joblib) is corrupted or empty.")
+        st.info("Try re-uploading your model files to your repository.")
+        st.stop() # Stops the app from running further
+    except FileNotFoundError:
+        st.error("🚨 **Error:** Model files not found. Make sure they are in the same folder as app.py.")
+        st.stop()
 
 car = load_data()
 best_rfr, best_svr = load_models()
