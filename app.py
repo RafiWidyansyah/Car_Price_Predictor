@@ -13,7 +13,7 @@ def load_data():
 def load_models():
     try:
         rfr = joblib.load('best_random_forest_regressor_model.joblib')
-        svr = joblib.load('best_SVR_Model.joblib')
+        svr = joblib.load('best_model_svr.joblib')
         return rfr, svr
     except EOFError:
         st.error("🚨 **Error:** One of your model files (.joblib) is corrupted or empty.")
