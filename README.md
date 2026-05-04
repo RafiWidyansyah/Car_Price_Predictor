@@ -1,6 +1,6 @@
 # Dokumentasi Kode: Aplikasi Prediksi Harga Mobil Bekas
 
-Aplikasi ini adalah dashboard interaktif berbasis web yang dibangun menggunakan **Streamlit**. Tujuannya adalah untuk memprediksi harga jual mobil bekas berdasarkan berbagai spesifikasi teknis menggunakan model Machine Learning yang telah dilatih sebelumnya.
+Aplikasi ini adalah dashboard interaktif berbasis web yang dibangun menggunakan **Streamlit**. Tujuannya untuk memprediksi harga jual mobil bekas berdasarkan berbagai spesifikasi teknis menggunakan model Machine Learning yang telah dilatih sebelumnya.
 
 ---
 
@@ -41,7 +41,7 @@ Aplikasi ini menggunakan pendekatan **Multi-Model Inference**:
 
 ### Preprocessing & Post-processing
 * **Label Encoding**: Mengonversi kategori teks menjadi numerik menggunakan `LabelEncoder` sebelum masuk ke model.
-* **Inverse Scaling**: Mengembalikan hasil prediksi yang ternormalisasi ke harga asli menggunakan rata-rata (`mean`) dan standar deviasi (`std`) dari kolom `selling_price` dengan rumus: $(	ext{Prediksi} 	imes \sigma) + \mu$.
+* **Inverse Scaling**: Mengembalikan hasil prediksi yang ternormalisasi ke harga asli menggunakan rata-rata (`mean`) dan standar deviasi (`std`) dari kolom `selling_price`.
 * **Ensemble Averaging**: Memberikan estimasi nilai pasar akhir dengan mengambil rata-rata dari hasil prediksi RFR dan SVR.
 
 ---
