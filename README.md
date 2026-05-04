@@ -1,4 +1,4 @@
-# Dokumentasi Kode: Aplikasi Prediksi Harga Mobil Bekas
+# Aplikasi Prediksi Harga Mobil Bekas
 
 Aplikasi ini adalah dashboard interaktif berbasis web yang dibangun menggunakan **Streamlit**. Tujuannya untuk memprediksi harga jual mobil bekas berdasarkan berbagai spesifikasi teknis menggunakan model Machine Learning yang telah dilatih sebelumnya.
 
